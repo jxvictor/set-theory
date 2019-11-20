@@ -88,7 +88,11 @@ class BinaryRelationUtils(object):
         an equivalence relation or False if it is not.
         """
         # TODO: Replace line below with actual code.
-        return BinaryRelationUtils.verify_reflexivity(binary_relation, input_set) and BinaryRelationUtils.verify_symmetry(binary_relation, input_set) and BinaryRelationUtils.verify_transitivity(binary_relation, input_set)
+        relation = BinaryRelationUtils
+        if relation.verify_reflexivity(binary_relation, input_set) and relation.verify_symmetry(binary_relation, input_set) and relation.verify_transitivity(binary_relation, input_set):
+            return True
+        else:
+            return False
 
     @staticmethod
     def get_partitioning(binary_relation, input_set):
