@@ -1,6 +1,9 @@
 #coding: utf-8
 
 
+#coding: utf-8
+
+
 class BinaryRelationUtils(object):
     """Class providing utilities to verify properties of a binary relation."""
 
@@ -51,7 +54,6 @@ class BinaryRelationUtils(object):
         """
         # TODO: Replace line below with actual code.
         bi = binary_relation.relation(input_set)
-
         for x in input_set:
             for y in input_set:
                 for z in input_set:
@@ -71,7 +73,6 @@ class BinaryRelationUtils(object):
         """
         # TODO: Replace line below with actual code.
         bi = binary_relation.relation(input_set)
-
         for x, y in bi:
             if (y, x) in bi and x != y:
                 return False
@@ -106,12 +107,12 @@ class BinaryRelationUtils(object):
         """
         # TODO: Replace line below with actual code.
         partitioning = []
-        relation = binary_relation.relation(input_set)
+        bi = binary_relation.relation(input_set)
         if BinaryRelationUtils.verify_equivalency(binary_relation, input_set):
             for x in input_set:
                 partition = set()
                 for y in input_set:
-                    if (x, y) in relation:
+                    if (x, y) in bi:
                         partition.add(y)
                 if partition not in partitioning:
                     partitioning.append(partition)
