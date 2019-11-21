@@ -1,9 +1,6 @@
 #coding: utf-8
 
 
-#coding: utf-8
-
-
 class BinaryRelationUtils(object):
     """Class providing utilities to verify properties of a binary relation."""
 
